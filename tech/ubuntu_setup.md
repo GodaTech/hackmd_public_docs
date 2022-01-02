@@ -56,6 +56,14 @@ Recommended use **different physical disk** in virtual machine.
 - [How to install Ubuntu 20.04 on Hyper-V with enhanced session](https://francescotonini.medium.com/how-to-install-ubuntu-20-04-on-hyper-v-with-enhanced-session-b20a269a5fa7)
 - [Ubuntu 20.04 on Hyper-V](https://medium.com/@labappengineering/ubuntu-20-04-on-hyper-v-8888fe3ced64)
 
+##### Downgrade Kernel version to compatible to Synology Active Backup for Business
+- `sudo apt install linux-image-5.4.0-1064-azure linux-headers-5.4.0-1064-azure`
+- Find the list of kernels installed and the grub menu entries
+  - `sudo grub-mkconfig | grep -E 'submenu |menuentry '`
+- `sudo vim /etc/default/grub`
+  - 
+- `sudo apt purge linux-image-5.11.0-1022-azure`
+
 #### VMware
 - VMware Tools
   - [x] Tested
